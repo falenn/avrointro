@@ -1,0 +1,16 @@
+{
+  "type":"record",
+  "namespace":"com.example",
+  "name":"Customer",
+  "fields": [
+    {"name": "uid","type":"string", "doc": "UUID"},
+    {"name":"first_name","type":"string", "doc":"customer first name"},
+    {"name":"last_name","type":"string", "doc":"customer last name"},
+    {"name":"age","type":"int", "doc":"customer age"},
+    {"name":"height","type":"float", "doc":"height in cm"},
+    {"name":"weight","type":"float", "doc":"weight in kg"},
+    {"name":"automated_email","type":"boolean", "default":true, "doc":"customer enabled auto email for marketting"},
+    {"name":"emails", "type":{"type":"array", "items":"string"},"default": []},
+    {"name":"creation_ts","type":"long", "logicalType":"timestamp-millis"}
+  ]
+}

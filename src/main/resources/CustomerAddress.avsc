@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "namespace": "com.example",
+  "name": "CustomerAddress",
+  "fields": [
+    {"name":  "address","type": "string"},
+    {"name":  "city","type": "string"},
+    {"name":  "postcode","type": ["int","string"], "doc":  "default is int like US"},
+    {"name":  "type", "type": "enum", "symbols": ["PO BOX","RESIDENTIAL","ENTERPRISE"]}
+  ]
+}
