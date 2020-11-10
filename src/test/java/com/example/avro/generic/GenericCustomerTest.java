@@ -138,6 +138,14 @@ public class GenericCustomerTest {
 
             List<GenericRecord> r  = readFromfile("customer-generic.avro");
             assertEquals(r.size(),records.size());
+
+            //Print the first name
+            for(GenericRecord rec : r) {
+                log.info("first name: " + rec.get("first_name"));
+            }
+
+            //print the schema carried by the object
+            log.info("Schema: " + r.get(0).getSchema().toString());
         } catch (Exception e ) {
             log.warn("Error: " + e);
             fail();
